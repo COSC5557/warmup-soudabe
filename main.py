@@ -49,7 +49,7 @@ if __name__ == "__main__":
     # Split the dataset into training and testing sets
     train_set, test_set = split_data(data_frame)
 
-    # *************** TRAINING SET ***************
+    # *************** TRAINING SET *****************************
     # Separate features and target variable in the training set
     train_wine_features, train_wine_labels = separate_features_target(train_set, target_column="quality")
 
@@ -70,7 +70,7 @@ if __name__ == "__main__":
     log_reg_train_accuracy = accuracy_score(train_wine_labels, log_reg_train_predictions)
     print(f"Logistic Regression Accuracy for TRAIN: {log_reg_train_accuracy}")
 
-    # *************** TESTING SET ***************
+    # *************** TESTING SET ********************************
     # Separate features and target variable in the training set
     test_wine_features, test_wine_labels = separate_features_target(test_set, target_column="quality")
 
@@ -84,3 +84,10 @@ if __name__ == "__main__":
     # Calculate and display the accuracy for the logistic regression model
     log_reg_test_accuracy = accuracy_score(test_wine_labels, log_reg_test_predictions)
     print(f"Logistic Regression Accuracy for TEST: {log_reg_test_accuracy}")
+
+
+    # ****** RESULTS *********************************************
+    # Linear Regression RMSE for TRAIN: 0.7502172818316428
+    # Logistic Regression Accuracy for TRAIN: 0.5423685553854007
+    # Linear Regression RMSE for TEST: 0.7543373063311429
+    # Logistic Regression Accuracy for TEST: 0.5091836734693878
